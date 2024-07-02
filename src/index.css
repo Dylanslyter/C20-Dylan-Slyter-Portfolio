@@ -7,17 +7,20 @@ body, h1, h2, h3, p, ul, li, a {
     box-sizing: border-box;
   }
   
-
   body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
     color: #333;
     margin: 0;
     padding: 0;
+    transition: background 0.5s ease-in-out;
+  }
+  html {
+    scroll-behavior: smooth;
   }
   
-  
+ 
   header {
     display: flex;
     justify-content: space-between;
@@ -30,7 +33,6 @@ body, h1, h2, h3, p, ul, li, a {
   
   header h1 {
     font-size: 1.5rem;
-    margin: 0;
   }
   
   nav a {
@@ -54,12 +56,34 @@ body, h1, h2, h3, p, ul, li, a {
     padding: 2rem;
     background-color: white;
     margin: 2rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
   section h2 {
     margin-bottom: 1rem;
     color: #282c34;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #61dafb;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
   }
   
   section img {
@@ -67,8 +91,14 @@ body, h1, h2, h3, p, ul, li, a {
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
   }
   
+  section img:hover {
+    transform: scale(1.05);
+  }
+  
+
   .project {
     margin-bottom: 2rem;
   }
@@ -96,7 +126,7 @@ body, h1, h2, h3, p, ul, li, a {
     color: #21a1f1;
   }
   
- 
+
   form {
     display: flex;
     flex-direction: column;
@@ -113,10 +143,11 @@ body, h1, h2, h3, p, ul, li, a {
   }
   
   form input, form textarea {
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
   }
   
   form input:focus, form textarea:focus {
@@ -145,7 +176,7 @@ body, h1, h2, h3, p, ul, li, a {
     margin-top: -0.5rem;
   }
   
- 
+
   footer {
     display: flex;
     justify-content: center;
@@ -168,7 +199,7 @@ body, h1, h2, h3, p, ul, li, a {
     color: #61dafb;
   }
   
- 
+
   @media (max-width: 768px) {
     header {
       flex-direction: column;
@@ -187,4 +218,5 @@ body, h1, h2, h3, p, ul, li, a {
       margin: 0.5rem 0;
     }
   }
+  
   

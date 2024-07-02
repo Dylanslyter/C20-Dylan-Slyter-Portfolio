@@ -1,7 +1,7 @@
-/* Global Styles */
+
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(135deg, #b0191e, #201375);
     margin: 0;
     padding: 0;
     color: #333;
@@ -10,8 +10,8 @@ body {
   
   .about-me {
     padding: 3rem 2rem;
-    background-color: #16b39e;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #250ef2, #e9e9ed);
+    box-shadow: 0 4px 8px rgba(242, 238, 238, 0.1);
     border-radius: 15px;
     margin: 2rem auto;
     max-width: 800px;
@@ -26,7 +26,7 @@ body {
   
   .about-me h2 {
     margin-bottom: 1.5rem;
-    color: #007bff;
+    color: #eef2f6;
     font-size: 2.5rem;
     font-weight: 700;
     position: relative;

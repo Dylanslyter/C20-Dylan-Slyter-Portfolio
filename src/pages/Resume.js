@@ -1,11 +1,21 @@
 import React from 'react';
-import './Resume.css'; // Import the CSS file
+import './Resume.css';
 
 const Resume = () => {
+  const handleDownloadClick = () => {
+    window.location.href = 'https://github.com/Dylanslyter';
+  };
+
   return (
     <section className="resume">
       <h2>Resume</h2>
-      <a href="/path-to-resume.pdf" download>Download Resume</a>
+      <a
+        href="/assets/resume.pdf"
+        download
+        onClick={handleDownloadClick}
+      >
+        Download Resume
+      </a>
       <h3>Proficiencies</h3>
       <ul>
         <li>JavaScript</li>
@@ -15,8 +25,13 @@ const Resume = () => {
         <li>HTML</li>
         <li>Git</li>
       </ul>
+      <div id="resume-image-container">
+        <img src="/assets/resume.jpg" alt="Resume" className="resume-image" />
+      </div>
     </section>
   );
 };
 
 export default Resume;
+
+
