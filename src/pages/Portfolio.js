@@ -1,20 +1,34 @@
- import React from 'react';
- import Project from './Project';
- 
- const projects = [
-   { title: 'Project 1', image: '/path-to-image1.jpg', deployed: 'https://deployed-link1.com', github: 'https://github.com/dylan-slyter/project1' },
-   { title: 'Project 2', image: '/path-to-image2.jpg', deployed: 'https://deployed-link2.com', github: 'https://github.com/dylan-slyter/project2' },
-   // Add 4 more projects
- ];
- 
- const Portfolio = () => {
-   return (
-     <section>
-       <h2>Portfolio</h2>
-       {projects.map((project, index) => (
-         <Project key={index} project={project} />
-       ))}
-     </section>
-   );
- }; 
- export default Portfolio;
+import React from 'react';
+import Project from './Project';
+import './Portfolio.css';
+
+const projects = [
+  {
+    name: 'PWAs',
+    description: 'A website that offers a chance to download a PWA.',
+    link: 'https://github.com/Dylanslyter/19-DS-PWA-s.git',
+  },
+  {
+    name: 'Taskinator',
+    description: 'A task-tracker application.',
+    link: 'https://github.com/Dylanslyter/Daily-task-maker.git',
+  },
+    {
+        name: 'Logo-creator',
+        description: 'Create logos with SVGs.',
+        link: 'https://github.com/Dylanslyter/SVG-logo-creator'
+    },
+];
+
+const Portfolio = () => {
+  return (
+    <section className="portfolio-section">
+      <h2>Portfolio</h2>
+      {projects.map((project, index) => (
+        <Project key={index} project={project} />
+      ))}
+    </section>
+  );
+};
+
+export default Portfolio;

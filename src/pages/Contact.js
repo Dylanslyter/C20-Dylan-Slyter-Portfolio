@@ -1,65 +1,34 @@
- import React, { useState } from 'react';
- 
- const Contact = () => {
-   const [name, setName] = useState('');
-   const [email, setEmail] = useState('');
-   const [message, setMessage] = useState('');
-   const [errors, setErrors] = useState({});
- 
-  const validateEmail = (email) => {
-     const re = /\S+@\S+\.\S+/;
-     return re.test(email);
-   };
- 
-   const handleBlur = (e) => {
-     const { name, value } = e.target;
-     if (!value) {
-       setErrors((prev) => ({ ...prev, [name]: 'This field is required' }));
-     } else if (name === 'email' && !validateEmail(value)) {
-       setErrors((prev) => ({ ...prev, [name]: 'Invalid email address' }));
-     } else {
-       setErrors((prev) => ({ ...prev, [name]: '' }));
-     }
-   };
- 
-   return (
-     <section>
-       <h2>Contact</h2>
-       <form>
-         <div>
-          <label>Name</label>
-           <input
-             type="text"
-             name="name"
-             value={name}
-            onChange={(e) => setName(e.target.value)}
-             onBlur={handleBlur}
-           />
-           {errors.name && <span>{errors.name}</span>}
-         </div>
-         <div>
-           <label>Email</label>
-           <input
-             type="email"
-             name="email"
-             value={email}
-             onChange={(e) => setEmail(e.target.value)}
-             onBlur={handleBlur}
-           />
-           {errors.email && <span>{errors.email}</span>}
-         </div>
-         <div>
-           <label>Message</label>
-           <textarea
-             name="message"
-             value={message}
-             onChange={(e) => setMessage(e.target.value)}
-             onBlur={handleBlur}
-           />
-           {errors.message && <span>{errors.message}</span>}
-         </div>
-         <button type="submit">Submit</button>
-       </form>
-     </section>
-   );
- };
+import React from 'react';
+import './Contact.css';
+
+const Contact = () => {
+  const name = "Dylan Slyter";
+  const email = "Dylan.Slyter@yahoo.com";
+  const message = "Contact me for any more information.";
+  const github = "https://github.com/Dylanslyter";
+
+  return (
+    <section className="contact-section">
+      <h2>Contact</h2>
+      <div className="contact-item">
+        <label>Name:</label>
+        <p>{name}</p>
+      </div>
+      <div className="contact-item">
+        <label>Email:</label>
+        <p>{email}</p>
+      </div>
+      <div className="contact-item">
+        <label>Message:</label>
+        <p>{message}</p>
+      </div>
+      <div className="contact-item">
+        <label>GitHub:</label>
+        <p><a href={github} target="_blank" rel="noopener noreferrer">{github}</a></p>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
+

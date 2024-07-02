@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  .about-me {
+    padding: 3rem 2rem;
+    background-color: #16b39e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .about-me:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-me h2 {
+    margin-bottom: 1.5rem;
+    color: #007bff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .about-me h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #ffeb3b;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .about-me-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    border: 4px solid #ffeb3b;
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .avatar:hover {
+    border-color: #f39c12;
+    transform: rotate(360deg);
+  }
+  
+  .bio {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .bio p {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .bio p:hover {
+    color: #333;
+  }
+  
+  .highlight {
+    color: #ffeb3b;
+    font-weight: bold;
+  }
+  
+  @media (min-width: 768px) {
+    .about-me-content {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    .avatar {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  }
+  
+  
