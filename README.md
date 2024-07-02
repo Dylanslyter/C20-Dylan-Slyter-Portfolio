@@ -16,3 +16,5 @@ Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 Launches the test runner in the interactive watch mode.<br />
 
 ### `npm run build`
+
+![My Image](./public/assets/screenshot.jpg)

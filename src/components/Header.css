@@ -1,4 +1,4 @@
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -17,6 +17,52 @@ header {
     margin: 0;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: bounceIn 2s infinite;
+    cursor: pointer;
+  }
+  
+  header h1:hover {
+    animation: spin 1s linear infinite, colorChange 5s linear infinite;
+  }
+  
+  @keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #61dafb;
+    }
+    25% {
+      color: #ff6b6b;
+    }
+    50% {
+      color: #fddb3a;
+    }
+    75% {
+      color: #2ecc71;
+    }
+    100% {
+      color: #61dafb;
+    }
   }
   
   nav a {
@@ -56,12 +102,25 @@ header {
   nav a:hover {
     color: #61dafb;
     transform: scale(1.1);
+    animation: bounceInHover 1s ease;
   }
   
   nav .active {
     font-weight: bold;
     color: #21a1f1;
     border-bottom: 2px solid #21a1f1;
+  }
+  
+  @keyframes bounceInHover {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-7px);
+    }
   }
   
 
@@ -76,7 +135,7 @@ header {
     }
   }
   
-
+ 
   @media (max-width: 768px) {
     header {
       flex-direction: column;
@@ -91,5 +150,8 @@ header {
       margin: 0.5rem 0;
     }
   }
+  
+  
+  
   
   

@@ -2,9 +2,6 @@ import React from 'react';
 import './Resume.css';
 
 const Resume = () => {
-  const handleDownloadClick = () => {
-    window.location.href = 'https://github.com/Dylanslyter';
-  };
 
   return (
     <section className="resume">
@@ -12,7 +9,6 @@ const Resume = () => {
       <a
         href="/assets/resume.pdf"
         download
-        onClick={handleDownloadClick}
       >
         Download Resume
       </a>
